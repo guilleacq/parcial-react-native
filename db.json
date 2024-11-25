@@ -15,24 +15,10 @@
       "isFavorite": false
     },
     {
-      "id": "rrpg",
-      "name": "Sahara Desert",
-      "description": "Experience the vastness of the largest hot desert.",
-      "difficulty": "medium",
-      "isFavorite": false
-    },
-    {
       "id": "auor",
       "name": "Amazon Rainforest",
       "description": "Explore the biodiversity of the largest rainforest.",
       "difficulty": "medium",
-      "isFavorite": false
-    },
-    {
-      "id": "guth",
-      "name": "Antarctica Expedition",
-      "description": "Venture into the coldest continent on Earth.",
-      "difficulty": "hard",
       "isFavorite": false
     },
     {
@@ -58,4 +44,3 @@
     }
   ]
 }
-
