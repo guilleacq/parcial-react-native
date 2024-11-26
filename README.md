@@ -1,1 +1,1 @@
-#Aplicación desarrollada en iOS
+Aplicación desarrollada en iOS
