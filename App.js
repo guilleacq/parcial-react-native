@@ -17,6 +17,7 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 
+// esta aplicacion LA TESTEE EN iOS
 function DestinationStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>

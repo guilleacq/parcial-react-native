@@ -13,7 +13,7 @@ export default function DestinationList({ navigation }) {
 
   const [destinations, setDestinations] = useState([]);
 
-  // useEffect que se ejecuta cada vez que entra en foco esta screen
+  // este es como un useEffect pero que se ejecuta cada vez que entra en foco esta screen
   useFocusEffect(
     React.useCallback(() => {
       Axios.get('http://172.20.10.3:8000/destinations')
@@ -24,6 +24,7 @@ export default function DestinationList({ navigation }) {
         .catch((error) => console.error(error));
     })
   );
+
 
   const handleDelete = (id) => {
     fetch(`http://172.20.10.3:8000/destinations/${id}`, {
@@ -75,7 +76,7 @@ export default function DestinationList({ navigation }) {
   const getFavoriteColor = (isFavorite) => {
 
     if (Platform.OS === 'ios') {
-      return isFavorite ? 'red' : 'black';
+      return isFavorite ? 'red' : 'black'; // Puse red en vez de pink porque no se veia nada en rosado (no te enojes fausti)
 
     } else if (Platform.OS === 'android') {
       return isFavorite ? 'yellow' : 'black';
@@ -103,7 +104,7 @@ export default function DestinationList({ navigation }) {
               </TouchableOpacity>
 
               <TouchableOpacity style={styles.editButton} onPress={() => navigation.navigate("DestinationEdit",
-                { item: item })}>
+                { destinationData: item })}>
                 <Ionicons name="create-outline" size={24} color="black" />
               </TouchableOpacity>
 
@@ -133,14 +134,14 @@ const styles = StyleSheet.create({
   },
 
   destinationsList: {
-    width: '100%',
+    width: '85%',
     paddingTop: 80,
     justifyContent: 'center',
     alignItems: 'center',
   },
 
   destinationItem: {
-    width: 300,
+    width: 250,
     marginBottom: 30,
     height: 150,
     backgroundColor: 'white',
